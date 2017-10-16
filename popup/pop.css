@@ -1,0 +1,100 @@
+body {
+    background-color: #939393;
+    width: 250px;
+    padding: 10px
+}
+.optionwords {
+    font-family: "Comic Sans MS", serif;
+    color: white;
+}
+
+#sideword {
+    position: absolute;
+    top: 55px;
+    left: 215px;
+}
+
+#frontword {
+    position: absolute;
+    top: 140px;
+    left: 215px;
+}
+
+#topsettings {
+    padding: 2px;
+    width: 200px;
+    height: 40px;
+    background-color: #939393;
+}
+
+#canofplayer {
+    background-color: #a3a800;
+    width: 200px;
+    height: 200px;
+}
+
+.switchv {
+    position: absolute;
+    width: 16px;
+    height: 40px;
+    left: 220px;
+    top: 100px;
+}
+
+.switch {
+    position: absolute;
+    width: 40px;
+    height: 14px;
+    left: 55px;
+    top: 28px;
+}
+
+.switch input, .switchV input {
+    display:none;
+}
+
+/* The slider */
+.slider, .sliderv {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 2px;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before, .sliderv:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider, input:checked + .sliderv {
+    background-color: #2196F3;
+}
+
+input:focus + .slider, input:focus + .slider + .sliderv{
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+input:checked + .sliderv:before {
+    transform: translateY(26px);
+}
+
+/* Rounded sliders */
+.slider.round, .sliderv.round {
+    border-radius: 40px;
+}
+
+.slider.round:before, .sliderv.round:before {
+    border-radius: 34px;
+}

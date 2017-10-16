@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Get Adventures",
+  "version": "9.4.17",
+  "description": "Hopefully a better notes.",
+  "applications": {
+    "gecko": {
+      "id": "gephery@gephery.com"
+    }
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "19": "assets/beasts-32.png",
+      "38": "assets/beasts-48.png"
+    },
+    "default_popup": "popup/pop.html",
+    "default_title": "GetAdventure"
+  },
+  "web_accessible_resources": [
+    "assets/spacemun.png"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["constants.js", "startup.js"],
+      "css": ["constant.css"]
+    }
+  ],
+  "background":
+    {
+      "scripts": ["getnotes.js"]
+    },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "<all_urls>"
+  ]
+}
